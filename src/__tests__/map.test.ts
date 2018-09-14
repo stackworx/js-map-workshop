@@ -38,6 +38,24 @@ test('test set and get', () => {
   expect(map.size).toBe(1);
 });
 
+test('test overwrite', () => {
+  const map = new StringMap();
+  map.set('A', 5);
+  map.set('A', 6);
+
+  expect(map.get('A')).toBe(6);
+  expect(map.size).toBe(1);
+});
+
+test('test delete', () => {
+  const map = new StringMap();
+  map.set('A', 5);
+  map.delete('A');
+
+  expect(map.get('A')).toBe(undefined);
+  expect(map.size).toBe(0);
+});
+
 test('test clear', () => {
   const map = new StringMap();
   map.set('A', 5);
