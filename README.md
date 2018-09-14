@@ -78,7 +78,17 @@ get(key: string) {
 }
 ```
 
-### 5. Delete
+### 5. Clear
+
+```
+clear() {
+  set size to zero
+  reset buckets array
+  reset num buckets
+}
+```
+
+### 6. Delete
 
 ```
 delete(key: string) {
@@ -94,7 +104,7 @@ delete(key: string) {
 }
 ```
 
-### 6. Set Part 2 (Expand buckets)
+### 7. Set Part 2 (Expand buckets)
 
 ```
 After set is complete, check if we need to increase the number of buckets
